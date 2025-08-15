@@ -60,3 +60,54 @@ l_chart.png
 └─ tableau/
    └─ Cyclistic_Q1_Dashboard.twbx   (or link in README if on Tableau Public)
 [Uploading Cyclistic Project.twb…]()
+
+# Cyclistic Bike-Share Q1 Analysis – Driving Membership Growth
+
+**Author:** Sourav Chakraborty  
+**Tools:** R (tidyverse, ggplot2), Tableau Public, Excel
+
+## Overview
+This Google Data Analytics case study analyzes **Cyclistic** bike-share trips for **Q1 (Jan–Mar) across two years** to understand differences between **members** and **casual riders** and recommend strategies to increase memberships.
+
+**Dashboard:** [View on Tableau Public](https://public.tableau.com/views/CyclisticProject_17550651032680/CyclisticBike-ShareMembervsCasualRiderTrends?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
+
+## Data
+- Source: Cyclistic public trip data (Q1 for two consecutive years).
+- Volume: ~1M rows (post-cleaning subset used for visuals).
+- Cleaned datasets (CSV):  
+  - `data/cleaned/rides_by_weekday.csv`  
+  - `data/cleaned/rides_by_month.csv`  
+  - `data/cleaned/rides_by_season.csv`  
+
+## Method
+1. **Prepare (R):** remove nulls/dupes, fix datetimes, create `ride_length`, `day_of_week`, `month`, `month_num`, `year`, `season`.
+2. **Aggregate (R):** three tidy tables for Tableau (weekday, monthly, seasonal).
+3. **Visualize (Tableau):** separate worksheets → one dashboard.
+
+## Key Findings (Q1 only)
+- **Ride Duration:** Casual rides are longer on average than member rides.
+- **Weekday vs Weekend:** Members are steady on weekdays; casual riders peak on weekends.
+- **Seasonality:** March uptick for both segments; spring boosts casual activity.
+
+## Recommendations
+- **Weekend promotions** for casual riders.
+- **Spring campaigns** to convert casuals before summer.
+- **Trial memberships** to reduce friction.
+
+## Files
+- **Report:** `report/Cyclistic_Q1_Report.pdf`
+- **Scripts:** `scripts/cyclistic_cleaning_analysis.R`
+- **Data (cleaned):** `data/cleaned/*.csv`
+- **Dashboard:** `tableau/Cyclistic_Q1_Dashboard.twbx` (or Tableau Public link)
+
+## How to Reproduce
+1. Open R script in `scripts/` and run to regenerate cleaned CSVs.
+2. Load CSVs into Tableau; recreate visuals per README notes.
+3. Or open the packaged workbook (`.twbx`) directly.
+
+## Notes / Limitations
+- Dataset covers **Q1 only** for both years.
+- **Hour-of-day analysis intentionally omitted**.
+
+## License
+MIT License. See `LICENSE`.
