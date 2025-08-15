@@ -108,6 +108,3 @@ This Google Data Analytics case study analyzes **Cyclistic** bike-share trips fo
 ## Notes / Limitations
 - Dataset covers **Q1 only** for both years.
 - **Hour-of-day analysis intentionally omitted**.
-
-## License
-MIT License. See `LICENSE`.
