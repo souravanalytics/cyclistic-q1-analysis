@@ -61,38 +61,44 @@ l_chart.png
    └─ Cyclistic_Q1_Dashboard.twbx   (or link in README if on Tableau Public)
 [Uploading Cyclistic Project.twb…]()
 
-# Cyclistic Bike-Share Q1 Analysis – Driving Membership Growth
+# 🚲 Cyclistic Bike-Share Analysis (Google Data Analytics Capstone)
 
-**Author:** Sourav Chakraborty  
-**Tools:** R (tidyverse, ggplot2), Tableau Public, Excel
+This project is my **Google Data Analytics Capstone Case Study**, where I analyzed Cyclistic bike-share data to identify differences between **casual riders** and **annual members**, and recommend strategies to increase memberships.
 
-## Overview
-This Google Data Analytics case study analyzes **Cyclistic** bike-share trips for **Q1 (Jan–Mar) across two years** to understand differences between **members** and **casual riders** and recommend strategies to increase memberships.
+---
 
-**Dashboard:** [View on Tableau Public](https://public.tableau.com/views/CyclisticProject_17550651032680/CyclisticBike-ShareMembervsCasualRiderTrends?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
+## 📊 Project Overview
+- **Business Task:** Identify how annual members and casual riders use Cyclistic bikes differently and recommend strategies to convert casuals into members.  
+- **Data Source:** Public Cyclistic trip data (Q1 for 2019 & 2020).  
+- **Tools Used:** R (tidyverse, lubridate), Tableau Public, Excel.  
+- **Outputs:** Cleaned datasets, R scripts, Tableau dashboards, written report.
 
-## Data
-- Source: Cyclistic public trip data (Q1 for two consecutive years).
-- Volume: ~1M rows (post-cleaning subset used for visuals).
-- Cleaned datasets (CSV):  
-  - `data/cleaned/rides_by_weekday.csv`  
-  - `data/cleaned/rides_by_month.csv`  
-  - `data/cleaned/rides_by_season.csv`  
+---
 
-## Method
-1. **Prepare (R):** remove nulls/dupes, fix datetimes, create `ride_length`, `day_of_week`, `month`, `month_num`, `year`, `season`.
-2. **Aggregate (R):** three tidy tables for Tableau (weekday, monthly, seasonal).
-3. **Visualize (Tableau):** separate worksheets → one dashboard.
+## 🔑 Key Findings
+1. **Weekday Patterns:**  
+   - Casual riders’ **average trip duration peaks on Thursday**.  
+   - Members remain relatively steady across weekdays.  
 
-## Key Findings (Q1 only)
-- **Ride Duration:** Casual rides are longer on average than member rides.
-- **Weekday vs Weekend:** Members are steady on weekdays; casual riders peak on weekends.
-- **Seasonality:** March uptick for both segments; spring boosts casual activity.
+2. **Monthly Patterns:**  
+   - **2019:** upward trend toward March.  
+   - **2020:**  
+     - **Casual average duration peaks in March**.  
+     - **Member average duration is lowest in March**.  
 
-## Recommendations
-- **Weekend promotions** for casual riders.
-- **Spring campaigns** to convert casuals before summer.
-- **Trial memberships** to reduce friction.
+3. **Seasonal Patterns:**  
+   - **Winter shows higher overall activity** than spring (in Q1).  
+   - Casual riders consistently take longer rides than members.
+
+---
+
+## 💡 Recommendations
+- **Midweek Campaigns:** “Try-a-Membership Thursday” to target casual riders when their trip duration spikes.  
+- **Seasonal Targeting:** Push **late-winter/early-spring offers**, especially March when casual rides peak.  
+- **Commute Value Messaging:** Highlight reliability and cost savings to members whose ride durations shorten.  
+- **Winter Readiness:** Ensure bike availability and safety communications to support strong winter activity.  
+
+---
 
 ## Files
 - **Report:** `report/Cyclistic_Q1_Report.pdf`
