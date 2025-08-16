@@ -1,6 +1,9 @@
 foldername/placeholder.txt
 cyclistic-q1-analysis/
 ├─ README.md
+├─ report/
+│  └─ Cyclistic_Q1_Report[full pdf report of cyclistic project.pdf](https://github.com/user-attachments/files/21808563/full.pdf.report.of.cyclistic.project.pdf)
+.pdf
 ├─ data/
 │  ├─ cleaned/
 │  │  ├─ rides_by_weekday,member_casual,day_of_week,ride_length
